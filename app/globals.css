@@ -2,3 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
+html{
+    font-size: 62.5%;
+    line-height: 1.15; /* 1 */
+}
+
+h1 {
+    font-size: 3rem; /* Default font size for h1 */
+}
+  
+    @media (min-width: 640px) {
+        h1{
+            font-size: 3.5rem;
+        }
+    }
+  
+    @media (min-width: 768px) {
+        h1{
+            font-size: 4rem;
+        }
+    }
+  
+    @media (min-width: 1024px) {
+        h1{
+            font-size: 5rem;
+        }
+    }
+  
+    @media (min-width: 1620px) {
+        h1{
+            font-size: 9.6rem;
+        }
+    }
+ 

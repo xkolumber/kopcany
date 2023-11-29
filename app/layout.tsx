@@ -17,13 +17,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="sk">
-      <body
-        className={`${inter.className} bg-gray-900 text-white dark:bg-gray-900 dark:selection:bg-gray-900 dark:text-white h-full selection:bg-gray-50`}
-      >
-        <Navbar />
-        <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          {children}
-        </main>
+      <body className={`${inter.className} bg-white  text-black`}>
+        <main className="">{children}</main>
       </body>
     </html>
   );
