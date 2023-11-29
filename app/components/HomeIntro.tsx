@@ -3,13 +3,11 @@ import NavbarIntro from "./NavbarIntro";
 
 const HomeIntro = () => {
   return (
-    <div className="flex flex-col h-screen justify-between mx-auto px-4 sm:px-6 lg:px-96">
+    <div className="padding_content bg_image">
       <NavbarIntro />
-      <div className="text">
+      <div>
         <p>. . . .</p>
-        <p className="sm:text-lg lg:text-xl">
-          Mikulčice - Kopčany - Holíč - Hodonín
-        </p>
+        <p>Mikulčice - Kopčany - Holíč - Hodonín</p>
         <h1>Lávkou cez Moravu</h1>
       </div>
     </div>

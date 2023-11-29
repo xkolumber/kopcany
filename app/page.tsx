@@ -4,12 +4,17 @@ import { Post } from "./lib/interface";
 import Link from "next/link";
 import { prefetchDNS } from "react-dom";
 import HomeIntro from "./components/HomeIntro";
+import MapSection from "./components/MapSection";
 
 const page = async () => {
   const query = `*[_type=='post']`;
   const data = (await client.fetch(query)) as Post[];
   return (
-    <HomeIntro />
+    <>
+      <HomeIntro />
+      <MapSection />
+    </>
+
     // <div className="divide-y divide-gray-200 dark:divide-gray-700">
     //   <div className="space-y-2 pt-6 pb-8 md:space-y-5">
     //     <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-white-900 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
