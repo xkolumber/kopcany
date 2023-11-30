@@ -4,7 +4,7 @@ import { Montserrat } from "next/font/google";
 import Navbar from "./components/Navbar";
 
 const montserrat = Montserrat({
-  weight: ["400", "700"],
+  weight: ["400", "600", "700"],
   subsets: ["latin"],
 });
 

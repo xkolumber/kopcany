@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const MapSection = () => {
   return (
-    <div className="padding_content bg-white">
+    <>
       <Image
         src="/kopcany_video.jpg"
         alt="Video z Kopcian"
@@ -11,7 +11,20 @@ const MapSection = () => {
         width={500}
         height={500}
       />
-    </div>
+
+      <h2 className="text-black">Mapa</h2>
+      <p className="text-black max-600px">
+        but also the leap into electronic typesetting, remaining essentially
+        unchanged.
+      </p>
+      <Image
+        src="/mapa.png"
+        alt="Mapa okolia Záhoria"
+        layout="responsive"
+        width={500}
+        height={500}
+      />
+    </>
   );
 };
 

@@ -3,7 +3,7 @@ import NavbarIntro from "./NavbarIntro";
 
 const HomeIntro = () => {
   return (
-    <div className="padding_content bg_image">
+    <div className="padding_content bg_image justify-between">
       <NavbarIntro />
       <div>
         <p>. . . .</p>
