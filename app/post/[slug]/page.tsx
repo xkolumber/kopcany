@@ -3,6 +3,7 @@ import Image from "next/image";
 import { client } from "@/app/lib/sanity";
 import { Theme } from "@/app/lib/interface_theme";
 import { urlFor } from "@/app/lib/sanityImageUrl";
+import Partners from "@/app/components/Partners";
 
 async function getData(slug: string) {
   const query = `*[_type == "themes" && slug.current =="${slug}"][0]`;
@@ -63,6 +64,7 @@ const page = async ({ params }: { params: { slug: string } }) => {
             objectFit: "cover",
           }}
         />
+        <Partners />
       </div>
     </>
   );
