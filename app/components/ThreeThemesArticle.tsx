@@ -39,7 +39,7 @@ const ThreeThemesArticle = ({ themes }: Props) => {
     <>
       <div className="flex flex-row gap-8">
         {displayedThemes.map((theme) => (
-          <Link href={`/post/po-stopach-t-g-masaryka`}>
+          <Link href={`/post/${theme.slug.current}`}>
             <ThemesArticle key={theme._id} theme={theme} />
           </Link>
         ))}

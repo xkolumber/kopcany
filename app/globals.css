@@ -120,6 +120,9 @@ p{
 .max-80vw{
     max-width: 60vw;
 }
+.relative{
+    position:relative;
+}
 /*Themes articles*/
 
 .themes_padding{
@@ -127,7 +130,24 @@ p{
     padding:2rem;
 
 }
-
+.text_limit_p{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 8; /* number of lines to show */
+            line-clamp: 8; 
+    -webkit-box-orient: vertical;
+}
+.text_limit_h4{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* number of lines to show */
+            line-clamp: 1; 
+    -webkit-box-orient: vertical;
+}
+.titulna_foto{
+    min-height: 70vh;
+    position: relative;
+}
 
 /*Buttons*/
 .btn{

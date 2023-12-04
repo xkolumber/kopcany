@@ -4,5 +4,12 @@ export interface Theme{
     slug: {
         current: string;
     };
+    titulna_foto: string;
+    kresleny_obrazok: string;
+    uvodny_text: string;
+    foto_stred_clanku: string;
+    pokracovanie_text:string;
+    skupina_obrazkov:string;
+    zaverecna_foto:string;
 
 }

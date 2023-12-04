@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Theme } from "../lib/interface_theme";
-import Link from "next/link";
+import { urlFor } from "../lib/sanityImageUrl";
 
 interface Props {
   theme: Theme;
@@ -9,30 +9,21 @@ interface Props {
 
 const ThemesArticle = ({ theme }: Props) => {
   return (
-    <div className={`flex flex-col text-black relative`}>
+    <div className={`flex flex-col text-black relative article_card`}>
       <div className="h-96 relative">
         <Image
-          src="/themes1.jpg"
+          src={urlFor(theme.titulna_foto).url()}
           alt="Mapa okolia Záhoria"
-          layout="fill"
-          objectFit="cover"
-          objectPosition="center"
+          fill={true}
+          style={{
+            objectFit: "cover",
+          }}
         />
       </div>
       <div className="themes_padding">
-        <h4>{theme.nazov_temy}</h4>
+        <h4 className="text_limit_h4">{theme.nazov_temy}</h4>
 
-        <p>
-          but also the leap into electronic typesetting, remaining essentially
-          unchanged. but also the leap into electronic typesetting, remaining
-          essentially unchanged.but also the leap into electronic typesetting,{" "}
-        </p>
-        <br></br>
-        <p>
-          remaining essentially unchanged. but also the leap into electronic
-          typesetting, remaining essentially unchanged. but also the leap into
-          electronic typesetting, remaining essentially unchanged.
-        </p>
+        <p className="text_limit_p">{theme.uvodny_text}</p>
       </div>
     </div>
   );

@@ -16,9 +16,6 @@ const page = async () => {
         <MapSection />
         <Themes />
         <ThreeThemesArticle themes={data} />
-        {/* {data.map((tema) => (
-          <li>{tema.nazov_temy}</li>
-        ))} */}
 
         <br></br>
         <SliderNews />
