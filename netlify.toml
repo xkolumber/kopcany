@@ -1,2 +1,2 @@
 [build]
-  ignore = "sanity/ sanity-studio/"
+  ignore = "sanity"
