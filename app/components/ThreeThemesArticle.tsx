@@ -1,10 +1,16 @@
 "use client";
 
-import dynamic from "next/dynamic";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import { Theme } from "../lib/interface_theme";
+import { client } from "../lib/sanity";
 import ThemesArticle from "./ThemesArticle";
+import Link from "next/link";
 
-const ThreeThemesArticle = () => {
+interface Props {
+  themes: Theme[];
+}
+
+const ThreeThemesArticle = ({ themes }: Props) => {
   const [windowWidth, setWindowWidth] = useState(0);
 
   useEffect(() => {
@@ -24,13 +30,18 @@ const ThreeThemesArticle = () => {
     articlesToShow = 2;
   } else if (windowWidth >= 1024) {
     articlesToShow = 3;
+  } else if (windowWidth >= 1400) {
+    articlesToShow = 4;
   }
+  const displayedThemes = themes.slice(0, articlesToShow);
+
   return (
     <>
       <div className="flex flex-row gap-8">
-        {/* Render the desired number of ThemesArticle components */}
-        {Array.from({ length: articlesToShow }).map((_, index) => (
-          <ThemesArticle key={index} />
+        {displayedThemes.map((theme) => (
+          <Link href={`/post/po-stopach-t-g-masaryka`}>
+            <ThemesArticle key={theme._id} theme={theme} />
+          </Link>
         ))}
       </div>
     </>

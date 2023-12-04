@@ -1,3 +1,2 @@
-import post from "./post";
-
-export const schemaTypes = [post]
+import themes from "./themes";
+export const schemaTypes = [themes]

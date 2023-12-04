@@ -5,9 +5,9 @@ import {schemaTypes} from './schemas'
 
 export default defineConfig({
   name: 'default',
-  title: 'Kopcany Project',
+  title: 'Kopcany',
 
-  projectId: '3g4n97dk',
+  projectId: 'd81tbq9h',
   dataset: 'production',
 
   plugins: [deskTool(), visionTool()],
