@@ -181,3 +181,19 @@ p{
     padding:1.6rem;
     color:var(--tertiary-color)
 }
+
+/*podujatie*/
+
+.events{
+    background-color: var(--secondary-color);
+}
+.event{
+
+}
+.event p{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp:3; /* number of lines to show */
+            line-clamp: 3; 
+    -webkit-box-orient: vertical;
+}

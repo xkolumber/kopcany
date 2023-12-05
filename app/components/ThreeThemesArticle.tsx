@@ -2,9 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Theme } from "../lib/interface_theme";
-import { client } from "../lib/sanity";
 import ThemesArticle from "./ThemesArticle";
-import Link from "next/link";
 
 interface Props {
   themes: Theme[];
