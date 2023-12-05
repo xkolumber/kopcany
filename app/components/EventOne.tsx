@@ -9,7 +9,7 @@ interface Props {
 }
 const EventOne = ({ event }: Props) => {
   return (
-    <div className={`grid grid-cols-3 event`}>
+    <div className={`event`}>
       <Link href={`/event/${event.slug.current}`}>
         <div className="h-96 relative">
           <Image

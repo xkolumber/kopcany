@@ -190,6 +190,14 @@ p{
 .event{
 
 }
+.event_data{
+    border-left: 1px solid black;
+    padding-left: 2rem;
+    gap: 7rem;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2rem;
+}
 .event p{
     overflow: hidden;
     display: -webkit-box;

@@ -35,7 +35,7 @@ const ThreeThemesArticle = ({ themes }: Props) => {
 
   return (
     <>
-      <div className="flex flex-row gap-8">
+      <div className="grid grid-cols-3">
         {displayedThemes.map((theme) => (
           <ThemesArticle key={theme._id} theme={theme} />
         ))}

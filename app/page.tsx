@@ -12,8 +12,6 @@ const page = async () => {
   const query = `*[_type=='themes']`;
   const data = (await client.fetch(query)) as Theme[];
 
-  const query2 = `*[_type=='events']`;
-  const data2 = (await client.fetch(query2)) as My_event[];
   return (
     <>
       <HomeIntro />
@@ -26,7 +24,7 @@ const page = async () => {
           <br></br>
           <SliderNews />
         </div>
-        <Events events={data2} />
+        <Events />
       </main>
     </>
   );
