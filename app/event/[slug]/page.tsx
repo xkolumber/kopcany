@@ -17,7 +17,7 @@ const page = async ({ params }: { params: { slug: string } }) => {
   const data = (await getData(params.slug)) as My_event;
   return (
     <>
-      <div className="titulna_foto">
+      <div className="titulna_foto padding_content intro_padding">
         <Navbar />
         <Image
           src={urlFor(data.titulna_foto).url()}

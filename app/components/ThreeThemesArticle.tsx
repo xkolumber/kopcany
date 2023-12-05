@@ -31,11 +31,11 @@ const ThreeThemesArticle = ({ themes }: Props) => {
   } else if (windowWidth >= 1400) {
     articlesToShow = 4;
   }
-  const displayedThemes = themes.slice(0, articlesToShow);
+  const displayedThemes = themes.slice(0, 3);
 
   return (
     <>
-      <div className="grid grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
         {displayedThemes.map((theme) => (
           <ThemesArticle key={theme._id} theme={theme} />
         ))}

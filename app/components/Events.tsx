@@ -13,7 +13,7 @@ const Events = async () => {
         <p className="text-black">
           V blízkej budúcnosti nás čakajú tieto podujatia:
         </p>
-        <div className="grid grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
           {events.map((event) => (
             <EventOne key={event._id} event={event} />
           ))}

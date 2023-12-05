@@ -4,6 +4,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
+import Image from "next/image";
 
 const Navbar = () => {
   const [clickedHamburger, setClickedHamburger] = useState(false);
@@ -31,6 +32,26 @@ const Navbar = () => {
         <Link href="/contact">
           <p>Kontakt</p>
         </Link>
+        <div className="grid grid-cols-3 gap-3">
+          <Image
+            src="/lang_sk.svg"
+            alt="Slovensky jazyk"
+            width={20}
+            height={20}
+          />
+          <Image
+            src="/lang_cz.svg"
+            alt="Slovensky jazyk"
+            width={20}
+            height={20}
+          />
+          <Image
+            src="/lang_en.svg"
+            alt="Slovensky jazyk"
+            width={20}
+            height={20}
+          />
+        </div>
       </div>
       <div className="navbar-mobile">
         <GiHamburgerMenu onClick={toggleClickHamburger} className="hamburger" />
@@ -56,6 +77,26 @@ const Navbar = () => {
               <Link href="/contact">
                 <p>Kontakt</p>
               </Link>
+              <div className="grid grid-cols-3 gap-3">
+                <Image
+                  src="/lang_sk.svg"
+                  alt="Slovensky jazyk"
+                  width={20}
+                  height={20}
+                />
+                <Image
+                  src="/lang_cz.svg"
+                  alt="Slovensky jazyk"
+                  width={20}
+                  height={20}
+                />
+                <Image
+                  src="/lang_en.svg"
+                  alt="Slovensky jazyk"
+                  width={20}
+                  height={20}
+                />
+              </div>
             </div>
           </>
         )}
