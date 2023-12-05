@@ -32,7 +32,7 @@ const Navbar = () => {
         <Link href="/contact">
           <p>Kontakt</p>
         </Link>
-        <div className="grid grid-cols-3 gap-3">
+        <div className="grid grid-cols-3 gap-3 cursor-pointer">
           <Image
             src="/lang_sk.svg"
             alt="Slovensky jazyk"
@@ -77,7 +77,7 @@ const Navbar = () => {
               <Link href="/contact">
                 <p>Kontakt</p>
               </Link>
-              <div className="grid grid-cols-3 gap-3">
+              <div className="grid gap-3">
                 <Image
                   src="/lang_sk.svg"
                   alt="Slovensky jazyk"
