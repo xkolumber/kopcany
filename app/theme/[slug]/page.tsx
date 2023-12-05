@@ -4,6 +4,7 @@ import { client } from "@/app/lib/sanity";
 import { Theme } from "@/app/lib/interface_theme";
 import { urlFor } from "@/app/lib/sanityImageUrl";
 import Partners from "@/app/components/Partners";
+import Navbar from "@/app/components/Navbar";
 
 async function getData(slug: string) {
   const query = `*[_type == "themes" && slug.current =="${slug}"][0]`;
@@ -15,8 +16,8 @@ const page = async ({ params }: { params: { slug: string } }) => {
   const data = (await getData(params.slug)) as Theme;
   return (
     <>
-      <div className="titulna_foto">
-        <div>Navbar</div>
+      <div className="titulna_foto intro_padding padding_content">
+        <Navbar />
         <Image
           src={urlFor(data.titulna_foto).url()}
           alt="Mapa okolia Záhoria"

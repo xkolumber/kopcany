@@ -5,6 +5,7 @@ import { urlFor } from "@/app/lib/sanityImageUrl";
 import Partners from "@/app/components/Partners";
 import { My_event } from "@/app/lib/interface_event";
 import Events from "@/app/components/Events";
+import Navbar from "@/app/components/Navbar";
 
 async function getData(slug: string) {
   const query = `*[_type == "events" && slug.current =="${slug}"][0]`;
@@ -17,7 +18,7 @@ const page = async ({ params }: { params: { slug: string } }) => {
   return (
     <>
       <div className="titulna_foto">
-        <div>Navbar</div>
+        <Navbar />
         <Image
           src={urlFor(data.titulna_foto).url()}
           alt="Mapa okolia Záhoria"

@@ -11,7 +11,7 @@ interface Props {
 const ThemesArticle = ({ theme }: Props) => {
   return (
     <div className={`flex flex-col text-black relative article_card`}>
-      <Link href={`/post/${theme.slug.current}`}>
+      <Link href={`/theme/${theme.slug.current}`}>
         <div className="h-96 relative">
           <Image
             src={urlFor(theme.titulna_foto).url()}

@@ -1,17 +1,66 @@
+"use client";
+
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { IoMdClose } from "react-icons/io";
 
 const Navbar = () => {
+  const [clickedHamburger, setClickedHamburger] = useState(false);
+
+  const toggleClickHamburger = () => {
+    setClickedHamburger(!clickedHamburger);
+    console.log("clicked");
+  };
+
   return (
-    <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="flex justify-between h-16">
-        <div className="flex justify-between items-center w-full">
-          <Link href="/">
-            <h1 className="text-2xl font-medium">navbar</h1>
-          </Link>
-        </div>
+    <>
+      <div className="navbar">
+        <Link href="/">
+          <p>O projekte</p>
+        </Link>
+        <Link href="/theme/pamiatky-velkej-moravy">
+          <p>Pamiatky Veľkej Moravy</p>
+        </Link>
+        <Link href="/theme/zazi-barokovu-krajinu">
+          <p>Zaži barokovú krajinu</p>
+        </Link>
+        <Link href="/theme/po-stopach-t-g-masaryka">
+          <p>Po stopách T.G. Masaryka</p>
+        </Link>
+        <Link href="/contact">
+          <p>Kontakt</p>
+        </Link>
       </div>
-    </div>
+      <div className="navbar-mobile">
+        <GiHamburgerMenu onClick={toggleClickHamburger} className="hamburger" />
+        {clickedHamburger && (
+          <>
+            <div className="expanded-navbar padding_content">
+              <IoMdClose
+                onClick={toggleClickHamburger}
+                className="hamburger_close"
+              />
+              <Link href="/">
+                <p>O projekte</p>
+              </Link>
+              <Link href="/theme/pamiatky-velkej-moravy">
+                <p>Pamiatky Veľkej Moravy</p>
+              </Link>
+              <Link href="/theme/zazi-barokovu-krajinu">
+                <p>Zaži barokovú krajinu</p>
+              </Link>
+              <Link href="/theme/po-stopach-t-g-masaryka">
+                <p>Po stopách T.G. Masaryka</p>
+              </Link>
+              <Link href="/contact">
+                <p>Kontakt</p>
+              </Link>
+            </div>
+          </>
+        )}
+      </div>
+    </>
   );
 };
 
